@@ -4,4 +4,7 @@ class GifsController < ApplicationController
 
   def trending
   end
+
+  def search
+  end
 end

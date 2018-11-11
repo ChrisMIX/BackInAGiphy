@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   #gif routes
   get '/gifs/trending' => 'gifs#trending'
+  get '/gifs/search' => 'gifs#search'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
