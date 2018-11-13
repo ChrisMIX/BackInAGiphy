@@ -1,4 +1,15 @@
 $(document).ready(function(){
+  console.log(window.location.href);
+  if (window.location.href == "http://localhost:3000/") {
+  alert("hey we loaded search!");
+}
+  if (window.location.href == "http://localhost:3000") {
+  alert("hey we loaded search!");
+}
+  if (window.location.href == "http://localhost:3000/?") {
+  alert("hey we loaded search!");
+}
+
   $('.searchthemgifs').on("submit", function(e){
     e.preventDefault();
 
@@ -21,14 +32,16 @@ $(document).ready(function(){
   })
 });
 
+if (window.location.href == "http://localhost:3000/gifs/trending") {
 var gifs2 = $.get("http://api.giphy.com/v1/gifs/trending?&api_key=CAj2qjW87gmnCf2At3tTexta2bhn3dLQ&limit=30");
 console.log(gifs2);
     gifs2.done(function(response){
+      $(".trendingsearchresults").html("");
       giffs2 = response.data
-      console.log(giffs2);
+
       for (i in giffs2)
       {
-        $('.trendingsearchresults').append("<img src='"+giffs2[i].images.original.url+"'/>")
-        console.log(giffs2[i].images.original.url);
+        $('.trendingsearchresults').append("<img src='"+giffs2[i].images.original.url+"'/>");
       }
     });
+  }

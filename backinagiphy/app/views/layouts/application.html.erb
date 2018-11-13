@@ -9,17 +9,23 @@
 </head>
 <body>
   <div id="heading">
-<div id="logo">Back In A <strong>GIF</strong>-y</div>
-<div id="welcome">
-  <% if current_user %>
-  Signed in as <%= current_user.username %> | <%= link_to "Logout", '/logout' %>
-<% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-<% end %>
-</div>
-</div>
+    <div id="logo">Back In A <strong>GIF</strong>-y</div>
+    <div id="welcome">
+      <% if current_user %>
+      Signed in as <%= current_user.username %> | <%= link_to "Logout", '/logout' %>
+      <% else %>
+      <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div id="links">
+    <a href="/">Search</a>
+    <a href="/gifs/trending">Trending</a>
+  </div>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>

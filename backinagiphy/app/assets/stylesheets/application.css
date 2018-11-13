@@ -15,7 +15,9 @@
  */
 
  html{
+  color: white;
   background-color: black;
+  font-family: "Courier New";
  }
 
  #logo{
@@ -32,4 +34,8 @@
 
  #heading{
   display: inline;
+ }
+
+ #links{
+  text-align: center;
  }
